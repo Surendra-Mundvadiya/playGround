@@ -1,0 +1,55 @@
+1. RabitMQ or AWS SQS or Apache Kafka (Use message queuing) =>
+    Implement a message queuing system, 
+    such as RabbitMQ or Kafka, 
+    to store messages temporarily until the server is back online.
+    When the server is available again, 
+    the messages can be processed in order. ==> AWS SQS
+
+2. WebSokets ==> (One to One Connection) (server to client(company_id(chat room)))
+
+3. Redis ==> (socket session, Token for auth) ==> 
+    1. caching ( https://www.youtube.com/watch?v=og_pzvjCilg )
+
+4. GraphQL ==> ( ashit, rohit )
+
+5. Data Cleaning (production) =>
+    1. key name -> snake_case,
+    2. remove data redundancy
+    3. Structured data moves to PostgreSQL (Like -> twillio,messages,template) 
+
+6. Test Cases:
+    1. unitTestCases => ( who write code will write test case )
+    2. testCases in gitHub Actions Pipeline => ( common for all )
+
+Execution: 
+    1. Class Diagram (LLD) ==> Low level design Architecture
+
+    2. Third Party API (Google API, Twillio API)(Implement Adaptor Class)
+
+    3. DataBase Connection to PostgreSQL
+
+1. Naming convention :
+   camelCase or snake_case,
+   class Name => Start with Capital
+   constant variable ( primitive DataType ) => all Letter Capital (Ex. NAME)
+   un_used_variable => Start With _underScore
+   1. Tabsize will be 4 spaces.
+   2. Follow the project structure.
+   2. Use camelCase for all variables/functions that you declare.
+   3. Class names will be in PascalCase.
+   4. Re-Useable Components will be in PascalCase.
+   5. Add a comment on each component/function with following information:     
+        1. Purpose of the function   
+        2. Parameters
+        3. Reposne Type (if required)
+        4. Use best linting practices:   
+   6. use `===` where possible.   
+   7. do not use `try-catch` unless absolutely required.   
+   8. do not leave un-used imports.   
+   9. do not leave un-used variables.   
+   10. define types of the variables in detail.   
+   11. Use modular imports wherever possible.
+
+2. Version Control
+3. TypeScript
+4. response structure
